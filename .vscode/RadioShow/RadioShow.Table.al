@@ -8,7 +8,7 @@ table 50143 "Radio Show"
 
     fields
     {
-        field(1; "No."; Code[20]) { Caption = 'Nr' }
+        field(1; "No."; Code[20]) { Caption = 'Nr'; }
         field(10; "Radio Show Type"; Code[10]) { }
         field(20; "Name"; Text[50]) { }
         field(40; "Run Time"; Duration) { }
