@@ -63,8 +63,9 @@ pageextension 50102 JobCardHvacExt extends "Job Card"
                 Caption = 'Karta PFR';
                 ApplicationArea = All;
                 Image = Discount;
-                RunObject = page "PFR List";
                 ToolTip = 'Wydrukuj karte';
+                RunObject = page "PFR Card";
+                //  RunPageLink = "Customer" = field ("No.");
 
             }
         }
