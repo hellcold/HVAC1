@@ -50,10 +50,7 @@ pageextension 50102 JobCardHvacExt extends "Job Card"
                     MultiLine = true;
                     ShowCaption = false;
 
-                    trigger OnValidate()
-                    begin
-                        Rec.SetActuallyExtendedText(ActuallyExtendedText);
-                    end;
+
                 }
 
                 field(QuoteInfo91111; Rec.QuoteInfo)
@@ -63,10 +60,7 @@ pageextension 50102 JobCardHvacExt extends "Job Card"
                     MultiLine = true;
                     ShowCaption = false;
 
-                    trigger OnValidate()
-                    begin
-                        Rec.SetActuallyExtendedText(ActuallyExtendedText);
-                    end;
+
                 }
             }
 
@@ -77,10 +71,7 @@ pageextension 50102 JobCardHvacExt extends "Job Card"
                 MultiLine = true;
                 ShowCaption = false;
 
-                trigger OnValidate()
-                begin
-                    Rec.SetActuallyExtendedText(ActuallyExtendedText);
-                end;
+
             }
         }
 
