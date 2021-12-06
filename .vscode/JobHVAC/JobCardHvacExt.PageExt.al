@@ -43,31 +43,52 @@ pageextension 50102 JobCardHvacExt extends "Job Card"
         {
             group("Opis Zlecenia")
             {
-                field(wstep33945; Rec.wstep) { ApplicationArea = All; ToolTip = 'Wprowadź tekst powitalny'; }
-                field(QuoteInfo91111; Rec.QuoteInfo) { ApplicationArea = All; ToolTip = 'Opisz zlecenie'; }
-                field(Wnioski11563; Rec.Wnioski) { ApplicationArea = All; ToolTip = 'Wprowadź wnioski'; }
+                field(wstep33945; Rec.wstep)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Wprowadź tekst powitalny';
+                    MultiLine = true;
+                    ShowCaption = false;
 
+                    trigger OnValidate()
+                    begin
+                        Rec.SetActuallyExtendedText(ActuallyExtendedText);
+                    end;
+                }
 
+                field(QuoteInfo91111; Rec.QuoteInfo)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Opisz zlecenie';
+                    MultiLine = true;
+                    ShowCaption = false;
+
+                    trigger OnValidate()
+                    begin
+                        Rec.SetActuallyExtendedText(ActuallyExtendedText);
+                    end;
+                }
             }
 
-        }
-    }
-
-
-    actions
-    {
-        addlast(navigation)
-        {
-            action(PFR)
+            field(Wnioski11563; Rec.Wnioski)
             {
-                Caption = 'Karta PFR';
                 ApplicationArea = All;
-                Image = Discount;
-                ToolTip = 'Wydrukuj karte';
-                RunObject = page "PFR Card";
-                //  RunPageLink = "Customer" = field ("No.");
+                ToolTip = 'Wprowadź wnioski';
+                MultiLine = true;
+                ShowCaption = false;
 
+                trigger OnValidate()
+                begin
+                    Rec.SetActuallyExtendedText(ActuallyExtendedText);
+                end;
             }
         }
+
+
     }
+
 }
+
+
+
+
